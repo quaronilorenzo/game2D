@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     public float speed = 3f;
     public InputAction MoveAction;
+
     Rigidbody2D rigidbody2d;
     Vector2 move;
     void Start()
