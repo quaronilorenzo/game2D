@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        PlayerHealth h = other.GetComponent<PlayerHealth>();
-        if (h != null && h.health < h.maxHealth)
+        PlayerHealth player = other.GetComponent<PlayerHealth>();
+        if (player != null && player.GetHealth() < player.GetMaxHealth())
         {
-            h.changeHealth(1);
+            player.ChangeHealth(1);
             Destroy(gameObject);
         }
     }
-
 }

@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+
 public class DamageZone : MonoBehaviour
 {
     void OnTriggerStay2D(Collider2D other)
     {
-        PlayerHealth h = other.GetComponent<PlayerHealth>();
-        if (h != null && h.health > 0)
+        PlayerHealth player = other.GetComponent<PlayerHealth>();
+        if (player != null)
         {
-            h.changeHealth(-1);
+            player.ChangeHealth(-1);
         }
     }
-    
 }
