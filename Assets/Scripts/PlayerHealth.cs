@@ -8,14 +8,15 @@ public class PlayerHealth : MonoBehaviour
     int currentHealth;
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = 1;
     }
-    void changeHealth(int amount)
+    public void changeHealth(int amount)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+       //  Debug.Log(currentHealth + "/" + maxHealth);
     }
     void Update()
     {
+        Debug.Log(currentHealth);
     }
 }
