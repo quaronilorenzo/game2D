@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public int health { get { return currentHealth; }}
     void Start()
     {
-        currentHealth = 1;
+        currentHealth = maxHealth;
     }
     public void changeHealth(int amount)
     {
